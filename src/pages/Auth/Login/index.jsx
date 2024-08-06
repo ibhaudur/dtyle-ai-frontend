@@ -6,8 +6,10 @@ import CustomInput from "../../../component/Forms/CustomInput";
 import CheckBox from "../../../component/Forms/CheckBox";
 import CustomButton from "../../../component/Button/CustomButton";
 import useResponsive from "../../../hooks/useResponsive";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const { isMobile } = useResponsive();
+  const navigate = useNavigate();
   return (
     <Container fluid className="login">
       <Row className="justify-content-center">
@@ -60,6 +62,7 @@ const Login = () => {
               <CustomButton
                 btnName="Sign in"
                 additionalStyle="w-100 radius-39"
+                handleClick={() => navigate("/home")}
               />
             </div>
           </section>
