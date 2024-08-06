@@ -1,0 +1,45 @@
+.c-white {
+  color: #ffffff;
+}
+.c-blue {
+  color: #5c4fc3;
+}
+.f-14 {
+  font-size: 14px;
+}
+.f-20 {
+  font-size: 20px;
+}
+.f-32 {
+  font-size: 32px;
+}
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+.radius-39 {
+  border-radius: 39px !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.form-input {
+  border: 0.6px solid #d4dde7;
+  border-radius: 10px;
+  padding: 16px;
+  height: 50px;
+  background-color: #fafafa;
+}
+.form-input::placeholder {
+  color: #61788a99;
+  font-size: 14px;
+}
+.custom-btn {
+  background: linear-gradient(12.03deg, #5c4fc3 16.86%, #2fe6cf 179.72%);
+  color: white !important;
+  text-transform: none !important;
+  padding: 10px !important;
+}
