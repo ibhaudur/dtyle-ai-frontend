@@ -13,3 +13,9 @@
 .login .form-box {
   padding: 0px 40px;
 }
+
+@media (max-width: 900px) {
+  .login .form-box {
+    padding: 0px;
+  }
+}

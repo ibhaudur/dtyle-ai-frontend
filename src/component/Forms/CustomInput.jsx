@@ -23,7 +23,7 @@ const CustomInput = ({ label, type, placeholer }) => {
   };
   return (
     <div className="mb-2">
-      <label className="mb-2">{label}</label>
+      <label className="mb-2 label">{label}</label>
       {renderInput()}
     </div>
   );

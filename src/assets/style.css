@@ -1,8 +1,22 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../../public/font/HelveticaNeueMedium.otf");
+}
+@font-face {
+  font-family: "Helvetica NeueRoman";
+  src: url("../../public/font/HelveticaNeueRoman.otf");
+}
+* {
+  font-family: "Helvetica NeueRoman";
+}
 .c-white {
   color: #ffffff;
 }
 .c-blue {
   color: #5c4fc3;
+}
+.c-grey {
+  color: #61788a;
 }
 .f-14 {
   font-size: 14px;
@@ -26,6 +40,11 @@
 .cursor-pointer {
   cursor: pointer;
 }
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Helvetica Neue;
+}
 .form-input {
   border: 0.6px solid #d4dde7;
   border-radius: 10px;
@@ -36,10 +55,12 @@
 .form-input::placeholder {
   color: #61788a99;
   font-size: 14px;
+  font-weight: 400;
 }
 .custom-btn {
   background: linear-gradient(12.03deg, #5c4fc3 16.86%, #2fe6cf 179.72%);
   color: white !important;
   text-transform: none !important;
   padding: 10px !important;
+  font-family: "Helvetica Neue" !important;
 }

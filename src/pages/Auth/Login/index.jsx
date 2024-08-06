@@ -5,23 +5,27 @@ import Logo from "../../../../public/image/dtile.svg";
 import CustomInput from "../../../component/Forms/CustomInput";
 import CheckBox from "../../../component/Forms/CheckBox";
 import CustomButton from "../../../component/Button/CustomButton";
+import useResponsive from "../../../hooks/useResponsive";
 const Login = () => {
+  const { isMobile } = useResponsive();
   return (
     <Container fluid className="login">
-      <Row>
-        <Col md={6} lg={6} className="px-0">
-          <div className=" bg-img w-100">
-            <div className="c-white mb-5">
-              <h3 className="f-32 text-center mb-4">
-                Enhancing Security & Safety <br></br> to the Next Level
-              </h3>
-              <p className="text-center">
-                The Future of AI-Powered Surveillance Cameras
-              </p>
+      <Row className="justify-content-center">
+        {!isMobile && (
+          <Col md={6} lg={6} className="px-0">
+            <div className=" bg-img w-100">
+              <div className="c-white mb-5">
+                <h3 className="f-32 text-center mb-4">
+                  Enhancing Security & Safety <br></br> to the Next Level
+                </h3>
+                <p className="text-center">
+                  The Future of AI-Powered Surveillance Cameras
+                </p>
+              </div>
             </div>
-          </div>
-        </Col>
-        <Col md={6} lg={6}>
+          </Col>
+        )}
+        <Col sm={8} md={6} lg={6}>
           <section className="p-5">
             <div className="d-flex justify-content-center">
               <img src={Logo} alt="logo" />
@@ -36,7 +40,7 @@ const Login = () => {
               </p>
               <div className="d-flex align-items-center justify-content-between">
                 <hr className="flex-grow-1" />
-                <span className="mx-2">or sign in with email</span>
+                <span className="mx-2 c-grey">or sign in with email</span>
                 <hr className="flex-grow-1" />
               </div>
               <CustomInput
