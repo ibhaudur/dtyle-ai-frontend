@@ -10,27 +10,36 @@ import PersonList from "./components/PersonList";
 import HeatMap from "./components/HeatMap";
 const Dashboard = () => {
   return (
-    <Container fluid>
-      <DashboardHeader />
-      <Row>
-        <Col md={5} lg={4} className="h-100 mb-3">
-          <CameraOverview />
-        </Col>
-        <Col md={7} lg={8} className="h-100 mb-3">
-          <Analytics />
-        </Col>
-        <Col md={12} lg={5} className="mb-3">
-          <LiveAlerts />
-        </Col>
-        <Col md={6} lg={3}>
-          <Facerecognition />
-          <PersonList />
-        </Col>
-        <Col md={6} lg={4}>
-          <HeatMap />
-        </Col>
-      </Row>
-    </Container>
+    <React.Fragment>
+      <div className="expire fixed-top d-flex justify-content-center align-items-center">
+        <p
+          className="mb-0 c-white f-14 fw-700 Helvetica Neue"
+        >
+          Your license will expires in 7 days!
+        </p>
+      </div>
+      <Container fluid>
+        <DashboardHeader />
+        <Row>
+          <Col md={5} lg={4} className="h-100 mb-3">
+            <CameraOverview />
+          </Col>
+          <Col md={7} lg={8} className="h-100 mb-3">
+            <Analytics />
+          </Col>
+          <Col md={12} lg={5} className="mb-3">
+            <LiveAlerts />
+          </Col>
+          <Col md={6} lg={3}>
+            <Facerecognition />
+            <PersonList />
+          </Col>
+          <Col md={6} lg={4}>
+            <HeatMap />
+          </Col>
+        </Row>
+      </Container>
+    </React.Fragment>
   );
 };
 

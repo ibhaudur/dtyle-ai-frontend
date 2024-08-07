@@ -14,7 +14,12 @@ const Accordion = ({ list }) => {
   return (
     <div className="accordion">
       {list?.map((item, index) => (
-        <div className={`${openIndex === index ? 'bg-lightblue' : 'bg-grey'} box mt-2 py-3`} key={index}>
+        <div
+          className={`${
+            openIndex === index ? "bg-lightblue" : "bg-grey"
+          } box mt-2 py-2`}
+          key={index}
+        >
           <div
             className="d-flex justify-content-between align-items-center cursor"
             onClick={() => toggleFaq(index)}
@@ -51,11 +56,14 @@ const Accordion = ({ list }) => {
             {/* <p className="mt-2 mb-0">{item.answer}</p> */}
             <ul className="mb-0 p-0">
               {item.answer.map((ans, i) => (
-                <li className="d-flex f-13 justify-content-between align-items-center px-3 py-2">
+                <li
+                  key={i}
+                  className="d-flex f-13 justify-content-between align-items-center px-3 py-2"
+                >
                   <small className=" fw-700 Helvetica Neue">
                     <CCTVIcon /> {ans.camera}
                   </small>
-                  <samll className="c-lightGrey">{ans.date_time}</samll>
+                  <small className="c-lightGrey">{ans.date_time}</small>
                   <button className="c-blue Helvetica Neue">Ignore</button>
                 </li>
               ))}

@@ -27,6 +27,18 @@
 .c-lightGrey {
   color: #767676;
 }
+.c-darkGrey {
+  color: #646464;
+}
+.c-darkGreen {
+  color: #248669;
+}
+.c-green {
+  color: #42c59e;
+}
+.c-lightGreen {
+  color: #9ae8d1;
+}
 .c-red {
   color: #ff4444;
 }
@@ -38,6 +50,9 @@
 }
 .bg-lightblue {
   background-color: #f3f1ff;
+}
+.f-10 {
+  font-size: 10px;
 }
 .f-11 {
   font-size: 11px;
@@ -80,6 +95,7 @@
 .header {
   border-bottom: 0.4px solid #d4dde7;
   background-color: #ffffff;
+  height: 64px;
 }
 .content-layout {
   background-color: #f5f7f9;
@@ -195,4 +211,23 @@
 }
 .pagination .icon:hover {
   background-color: #eceaff;
+}
+.pointer,
+.value-text,
+.tick-value,
+.tick-line {
+  display: none !important;
+}
+.chart-gauge {
+  position: relative;
+}
+.chart-gauge .content {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.expire {
+  background: linear-gradient(0.44deg, #2fe6cf 15.98%, #5c4fc3 89.15%);
+  top: 64px !important;
+  height: 34px;
 }

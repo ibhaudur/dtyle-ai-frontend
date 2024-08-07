@@ -13,12 +13,15 @@ const PersonList = () => {
       </div>
       <ul className="mb-0 p-0 mt-2">
         {Array.from({ length: 5 }).map((_, index) => (
-          <li className="d-flex f-13 justify-content-between align-items-center p-2">
+          <li
+            key={index}
+            className="d-flex f-13 justify-content-between align-items-center p-2"
+          >
             <small className=" fw-700 Helvetica Neue">
               <img src={Avatar} className="radius-39" width={23} alt="i" />
               &nbsp; Roller ball
             </small>
-            <samll className="c-lightGrey">09:47:25 AM</samll>
+            <small className="c-lightGrey">09:47:25 AM</small>
           </li>
         ))}
       </ul>

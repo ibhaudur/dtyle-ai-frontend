@@ -1,5 +1,6 @@
 import React from "react";
 import Face from "../../../../public/image/dashboard/face-recognition/face.svg";
+import Gauge from "../../../component/chart/Gauge";
 
 const Facerecognition = () => {
   return (
@@ -13,6 +14,7 @@ const Facerecognition = () => {
           </p>
         </div>
       </div>
+      <Gauge/>
     </section>
   );
 };
