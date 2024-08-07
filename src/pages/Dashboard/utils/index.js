@@ -43,3 +43,96 @@ export const AnalticsList = [
     desc: "Overall workers count by detection",
   },
 ];
+
+export const AlertList = [
+  {
+    question: "Safety Gear violation",
+    count: "4",
+    answer: [
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+    ],
+  },
+  {
+    question: "Camera Tempering",
+    count: "5",
+    answer: [
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+    ],
+  },
+  {
+    question: "Vehicle Trespass",
+    count: "12",
+    answer: [
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+    ],
+  },
+  {
+    question: "Trespass",
+    count: "34",
+    answer: [
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+    ],
+  },
+  {
+    question: "Tripwire",
+    count: "34",
+    answer: [
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+      {
+        camera: "CAM0003",
+        date_time: "20th July 2023 at 05:47:25 PM",
+      },
+    ],
+  },
+];

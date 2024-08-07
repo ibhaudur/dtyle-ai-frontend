@@ -10,3 +10,8 @@
 .camera-overview .box2 {
   border-bottom: 0.6px solid #d4dde7;
 }
+.alerts hr {
+  border: none;
+  border-top: 2px dashed #000;
+  border-top-style: dashed;
+}
