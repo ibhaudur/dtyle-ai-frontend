@@ -19,7 +19,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <Container fluid className="content-layout pb-3 mt-5">
+      <Container fluid className="content-layout pt-4 pb-3 mt-5">
         <Outlet />
       </Container>
     </React.Fragment>

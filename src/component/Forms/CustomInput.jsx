@@ -1,6 +1,14 @@
 import React from "react";
 
-const CustomInput = ({ label, type, placeholer }) => {
+const CustomInput = ({
+  label,
+  type,
+  placeholer,
+  specialClass,
+  options,
+  valKey,
+  labelKey,
+}) => {
   const renderInput = () => {
     switch (type) {
       case "password":
@@ -8,15 +16,26 @@ const CustomInput = ({ label, type, placeholer }) => {
           <input
             type={type}
             placeholder={placeholer}
-            className={`form-control form-input`}
+            className={`form-control form-input ${specialClass}`}
           />
+        );
+      case "select":
+        return (
+          <select className={`form-select form-input ${specialClass}`}>
+            <option value="">Select {label}</option>
+            {options.map((item, index) => (
+              <option key={index} value={item[valKey]}>
+                {item[labelKey]}
+              </option>
+            ))}
+          </select>
         );
       default:
         return (
           <input
             type={type}
             placeholder={placeholer}
-            className={`form-control form-input`}
+            className={`form-control form-input ${specialClass}`}
           />
         );
     }

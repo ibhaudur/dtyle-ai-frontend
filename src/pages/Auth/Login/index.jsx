@@ -49,11 +49,13 @@ const Login = () => {
                 label="Email or User name"
                 type="email"
                 placeholer="Enter Email or User name"
+                specialClass="h-50px"
               />
               <CustomInput
                 label="Password"
                 type="password"
                 placeholer="Enter Password"
+                specialClass="h-50px"
               />
               <p className="f-14 fw-500 d-flex justify-content-between align-items-center">
                 <CheckBox label="Remember" />
@@ -62,7 +64,7 @@ const Login = () => {
               <CustomButton
                 btnName="Sign in"
                 additionalStyle="w-100 radius-39"
-                handleClick={() => navigate("/home")}
+                handleClick={() => navigate("/dashboard")}
               />
             </div>
           </section>

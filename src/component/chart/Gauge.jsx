@@ -48,12 +48,12 @@ const Gauge = () => {
             <p className="f-14 fw-700 mb-2">628</p>
           </li>
           <li className="d-flex justify-content-between">
-            <p className="c-darkGrey f-13 mb-2">
+            <p className="c-darkGrey f-13 mb-0">
               {" "}
               <BsFillSquareFill className="f-10 c-lightGreen" />
               &nbsp; Absent
             </p>
-            <p className="f-14 fw-700 mb-2">4,350</p>
+            <p className="f-14 fw-700 mb-0">4,350</p>
           </li>
         </ul>
       </div>

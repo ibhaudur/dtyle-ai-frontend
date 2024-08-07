@@ -89,6 +89,9 @@
   width: 32px;
   height: 32px;
 }
+.h-50px {
+  height: 50px !important;
+}
 .radius-39 {
   border-radius: 39px !important;
 }
@@ -119,11 +122,11 @@
   font-family: Helvetica Neue;
 }
 .form-input {
-  border: 0.6px solid #d4dde7;
-  border-radius: 10px;
-  padding: 16px;
-  height: 50px;
-  background-color: #fafafa;
+  border: 0.6px solid #d4dde7 !important;
+  border-radius: 10px !important;
+  height: 40px;
+  font-size: 14px !important;
+  background-color: #fafafa !important;
 }
 .form-input::placeholder {
   color: #61788a99;
