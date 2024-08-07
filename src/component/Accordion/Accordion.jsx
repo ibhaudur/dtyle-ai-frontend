@@ -3,7 +3,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import CCTVIcon from "../Icon/CCTVIcon";
 
 const Accordion = ({ list }) => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
   const toggleFaq = (index) => {
     if (openIndex === index) {
       setOpenIndex(null);

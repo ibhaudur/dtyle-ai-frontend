@@ -39,6 +39,9 @@
 .bg-lightblue {
   background-color: #f3f1ff;
 }
+.f-11 {
+  font-size: 11px;
+}
 .f-12 {
   font-size: 12px;
 }
@@ -174,5 +177,22 @@
   border-radius: 8px;
 }
 .accordion button:hover {
+  background-color: #eceaff;
+}
+.personalList li {
+  border-bottom: 1px solid #d4dde7;
+}
+.personalList li:last-child {
+  border-bottom: none;
+}
+.pagination .icon {
+  padding: 8px;
+  background-color: #f5f7f9;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.pagination .icon:hover {
   background-color: #eceaff;
 }
