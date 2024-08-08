@@ -23,7 +23,7 @@ const CameraOverview = () => {
           <Row className="h-100">
             <Col xs={6} sm={6} md={12} className="p-3 box2">
               <div className="card-box">
-                <p className="f-14 ">
+                <p className="f-14 d-flex">
                   <img src={Accept} alt="i" width={18} />
                   &nbsp; On duty - Working
                 </p>
@@ -35,7 +35,7 @@ const CameraOverview = () => {
             </Col>
             <Col xs={6} sm={6} md={12} className="p-3">
               <div className="card-box">
-                <p className="f-14">
+                <p className="f-14 d-flex">
                   <img src={Cancel} alt="i" width={18} />
                   &nbsp;Off duty - Not working
                 </p>

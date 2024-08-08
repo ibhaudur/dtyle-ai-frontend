@@ -17,10 +17,10 @@ const Login = () => {
           <Col md={6} lg={6} className="px-0">
             <div className=" bg-img w-100">
               <div className="c-white mb-5">
-                <h3 className="f-32 text-center mb-4">
+                <h3 className="f-32 text-center mb-4 Epilogue fw-700">
                   Enhancing Security & Safety <br></br> to the Next Level
                 </h3>
-                <p className="text-center">
+                <p className="text-center Epilogue">
                   The Future of AI-Powered Surveillance Cameras
                 </p>
               </div>
@@ -48,13 +48,13 @@ const Login = () => {
               <CustomInput
                 label="Email or User name"
                 type="email"
-                placeholer="Enter Email or User name"
+                placeholder="Enter Email or User name"
                 specialClass="h-50px"
               />
               <CustomInput
                 label="Password"
                 type="password"
-                placeholer="Enter Password"
+                placeholder="Enter Password"
                 specialClass="h-50px"
               />
               <p className="f-14 fw-500 d-flex justify-content-between align-items-center">

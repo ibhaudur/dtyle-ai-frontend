@@ -2,7 +2,7 @@ import React from "react";
 import camera from "../../../../public/image/icons/camera.svg";
 import monitor from "../../../../public/image/monitor.png";
 import { GrFormEdit } from "react-icons/gr";
-import { LiaHashtagSolid } from "react-icons/lia";
+import { LiaCodeBranchSolid, LiaHashtagSolid } from "react-icons/lia";
 import { FaRotateLeft } from "react-icons/fa6";
 import {
   PiArrowUUpLeft,
@@ -41,12 +41,12 @@ const CameraMonitor = () => {
           <div>
             <GrFormEdit className="icon active mb-2" />
             <LiaHashtagSolid className="icon mb-2" />
-            <LiaHashtagSolid className="icon mb-2" />
+            <LiaCodeBranchSolid className="icon mb-2" />
           </div>
           <div>
-            <LuRotateCcw className="icon mb-2" />
             <PiArrowUUpLeft className="icon mb-2" />
-            <PiArrowUUpRight className="icon" />
+            <PiArrowUUpRight className="icon mb-2" />
+            <LuRotateCcw className="icon" />
           </div>
         </div>
       </div>

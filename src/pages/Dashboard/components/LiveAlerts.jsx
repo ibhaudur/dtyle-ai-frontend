@@ -2,14 +2,29 @@ import React from "react";
 import Alert from "../../../../public/image/dashboard/live-alert/alert.svg";
 import Accordion from "../../../component/Accordion/Accordion";
 import { AlertList } from "../utils";
+import CustomInput from "../../../component/Forms/CustomInput";
 const LiveAlerts = () => {
   return (
     <section className="custom-cards alerts p-3">
-      <div className="d-flex align-items-center gap-3">
-        <img src={Alert} alt="i" />
+      <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex gap-3">
+          <img src={Alert} alt="i" />
+          <div>
+            <p className="fw-700 Helvetica Neue mb-0">Live Alerts</p>
+            <p className="f-13 mb-0 c-lightGrey">All alerts are listed here </p>
+          </div>
+        </div>
         <div>
-          <p className="fw-700 Helvetica Neue mb-0">Live Alerts</p>
-          <p className="f-13 mb-0 c-lightGrey">All alerts are listed here </p>
+          <CustomInput
+            type="select"
+            options={[
+              { id: "option1", label: "Option 1" },
+              { id: "option2", label: "Option 2" },
+            ]}
+            defaultlabel="Select Camera"
+            valKey="id"
+            labelKey="label"
+          />
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-between mt-3">
