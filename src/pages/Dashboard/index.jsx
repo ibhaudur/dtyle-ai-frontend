@@ -18,7 +18,7 @@ const Dashboard = () => {
           Your license will expires in 7 days!
         </p>
       </div>
-      <Container fluid>
+      <Container fluid className="pb-5">
         <DashboardHeader />
         <Row>
           <Col md={5} lg={4} className="h-100 mb-3">

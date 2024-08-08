@@ -3,7 +3,7 @@ import React from "react";
 const CustomInput = ({
   label,
   type,
-  placeholer,
+  placeholder,
   specialClass,
   options,
   valKey,
@@ -15,7 +15,7 @@ const CustomInput = ({
         return (
           <input
             type={type}
-            placeholder={placeholer}
+            placeholder={placeholder}
             className={`form-control form-input ${specialClass}`}
           />
         );
@@ -34,15 +34,15 @@ const CustomInput = ({
         return (
           <input
             type={type}
-            placeholder={placeholer}
+            placeholder={placeholder}
             className={`form-control form-input ${specialClass}`}
           />
         );
     }
   };
   return (
-    <div className="mb-2">
-      <label className="mb-2 label">{label}</label>
+    <div>
+      {label && <label className="mb-2 label">{label}</label>}
       {renderInput()}
     </div>
   );

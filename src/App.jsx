@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Login from "./pages/Auth/Login";
 import React from "react";
 import "./assets/style.css";
@@ -12,8 +12,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Header />}>
-          <Route index element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route index element={<Navigate to="/dashboard" replace />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
           <Route path="/camera-feed" element={<CameraFeed />} />
         </Route>
       </Routes>
