@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CustomInput = ({
   label,
@@ -8,13 +8,18 @@ const CustomInput = ({
   options,
   valKey,
   labelKey,
+  defaultlabel,
 }) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   const renderInput = () => {
     switch (type) {
       case "password":
         return (
           <input
-            type={type}
+            type={showPassword ? "text" : "password"}
             placeholder={placeholder}
             className={`form-control form-input ${specialClass}`}
           />
@@ -22,7 +27,7 @@ const CustomInput = ({
       case "select":
         return (
           <select className={`form-select form-input ${specialClass}`}>
-            <option value="">Select {label}</option>
+            <option value="">{label ? `Select ${label}` : defaultlabel}</option>
             {options.map((item, index) => (
               <option key={index} value={item[valKey]}>
                 {item[labelKey]}
@@ -41,9 +46,23 @@ const CustomInput = ({
     }
   };
   return (
-    <div>
+    <div className={type === "password" ? "position-relative" : ""}>
       {label && <label className="mb-2 label">{label}</label>}
       {renderInput()}
+      {type === "password" && (
+        <div
+          className="d-flex f-13 align-items-center position-absolute"
+          type="button"
+          style={{ top: "60%", right: "15px" }}
+          onClick={togglePasswordVisibility}
+        >
+          {showPassword ? (
+            <span className="">Hide</span>
+          ) : (
+            <span className="">Show</span>
+          )}
+        </div>
+      )}
     </div>
   );
 };

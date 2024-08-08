@@ -41,7 +41,7 @@ const CameraMonitor = () => {
           <div>
             <GrFormEdit className="icon active mb-2" />
             <LiaHashtagSolid className="icon mb-2" />
-            <LiaHashtagSolid className="icon" />
+            <LiaHashtagSolid className="icon mb-2" />
           </div>
           <div>
             <LuRotateCcw className="icon mb-2" />

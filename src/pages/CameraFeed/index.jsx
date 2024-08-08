@@ -9,11 +9,11 @@ const CameraFeed = () => {
   return (
     <React.Fragment>
       <Row className="mt-2 pb-5">
-        <Col md={6}>
+        <Col md={6} className="px-2">
           <RuleDetails />
           <CustomAndAlert />
         </Col>
-        <Col md={6}>
+        <Col md={6} className="px-2">
           <CameraMonitor />
         </Col>
       </Row>

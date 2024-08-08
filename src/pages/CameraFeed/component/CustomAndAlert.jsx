@@ -16,7 +16,7 @@ const CustomAndAlert = () => {
     setDateRange(event.target.value);
   };
   return (
-    <section className="custom-cards rule p-3">
+    <section className="custom-cards rule p-3 mb-3">
       <p className="fw-700 f-20 Helvetica Neue mb-0">Custom & Alert details</p>
       <small className="f-14 c-lightGrey">
         Enter the below details manually

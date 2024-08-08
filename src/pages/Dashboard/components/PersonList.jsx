@@ -4,7 +4,7 @@ import Pagination from "../../../component/Pagination/Pagination";
 
 const PersonList = () => {
   return (
-    <section className="custom-cards personalList p-3">
+    <section className="custom-cards personalList p-3 mb-3">
       <div className="d-flex align-items-center gap-3">
         <div>
           <p className="f-13 Helvetica Neue mb-0">24 Persons</p>
