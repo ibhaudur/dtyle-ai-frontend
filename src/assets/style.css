@@ -10,6 +10,11 @@
   font-family: "Epilogue";
   src: url("../../public/font/Epilogue-VariableFont_wght.ttf");
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
 .Epilogue {
   font-family: "Epilogue";
 }
@@ -80,6 +85,9 @@
 .f-14 {
   font-size: 14px;
 }
+.f-15 {
+  font-size: 15px;
+}
 .f-18 {
   font-size: 18px;
 }
@@ -108,7 +116,7 @@
   height: 32px;
 }
 .h-50px {
-  height: 50px !important;
+  height: 45px !important;
 }
 .radius-39 {
   border-radius: 39px !important;
@@ -151,6 +159,16 @@
   color: #61788a99;
   font-size: 14px;
   font-weight: 400;
+}
+.otp-input {
+  border: 0.6px solid #d4dde7;
+  border-radius: 10px !important;
+  height: 60px;
+  width: 100%;
+  font-size: 24px !important;
+  background-color: #ffffff !important;
+  text-align: center;
+  margin-right: 6px;
 }
 .custom-btn {
   background: linear-gradient(12.03deg, #5c4fc3 16.86%, #2fe6cf 179.72%);
@@ -345,5 +363,12 @@
     position: absolute;
     top: 68%;
     left: 44%;
+  }
+}
+@media (max-width: 768px) {
+  .otp-input {
+    height: 50px;
+    width: 100%;
+    font-size: 18px !important;
   }
 }

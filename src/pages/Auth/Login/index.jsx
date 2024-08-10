@@ -23,7 +23,7 @@ const Login = () => {
           sm={8}
           md={6}
           lg={6}
-          className="d-flex flex-column justify-content-center"
+          className="d-flex content-center flex-column justify-content-center"
         >
           <section className="p-5">
             <div className="d-flex justify-content-center">
