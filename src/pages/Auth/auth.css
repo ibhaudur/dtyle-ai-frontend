@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 115.17%),
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33%, #000000 105.17%),
     url(../../../../public/image/loginAvt.png);
   height: 100vh;
   background-position: center;
@@ -13,7 +13,9 @@
 .login .form-box {
   padding: 0px 40px;
 }
-
+a {
+  text-decoration: none !important;
+}
 @media (max-width: 900px) {
   .login .form-box {
     padding: 0px;
