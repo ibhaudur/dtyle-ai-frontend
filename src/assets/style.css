@@ -124,8 +124,25 @@ input[type="number"]::-webkit-outer-spin-button {
 .radius-39 {
   border-radius: 39px !important;
 }
-.square-icon{
+.square-icon {
   border-radius: 4px;
+}
+.search-box {
+  border-radius: 30px;
+  padding: 10px 10px 10px 27px;
+  height: 32px;
+  width: 130px;
+  border: 0.7px solid #d4dde7;
+}
+.search-box::placeholder {
+  color: #767676;
+  font-size: 12px;
+  font-weight: 400;
+}
+.search-box,
+svg {
+  left: 8px;
+  top: 9px;
 }
 .header {
   border-bottom: 0.4px solid #d4dde7;
@@ -364,8 +381,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .single-date-picker .icon:hover {
   background-color: #eceaff;
 }
-.thead{
-  background: #F3F2FF;
+.thead {
+  background: #f3f2ff;
   width: 100%;
   border-radius: 8px;
 }

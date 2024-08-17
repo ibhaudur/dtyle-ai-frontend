@@ -1,15 +1,17 @@
 import React from "react";
 import Avatar from "../../../../public/image/dashboard/face-recognition/avatar.png";
 import Pagination from "../../../component/Pagination/Pagination";
+import SearchBox from "../../../component/Forms/SearchBox";
 
 const PersonList = () => {
   return (
     <section className="custom-cards personalList p-3 mb-3">
       <div className="d-flex align-items-center gap-3">
-        <div>
+        <div className="flex-grow-1">
           <p className="f-13 Helvetica Neue mb-0">24 Persons</p>
           <p className="f-11 mb-0 c-lightGrey">Today, 08:36 pm</p>
         </div>
+        <SearchBox />
       </div>
       <ul className="mb-0 p-0 mt-2">
         {Array.from({ length: 5 }).map((_, index) => (
