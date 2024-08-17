@@ -15,8 +15,11 @@ const Analytics = () => {
       <Row className="px-2">
         {AnalticsList.map((item, index) => {
           return (
-            <Col key={index} className="p-1" md={6} lg={6} xl={4}>
-              <div className="grey-card p-2">
+            <Col key={index} className="p-1" md={6} lg={6} xl={6}>
+              <div
+                className="grey-card p-2"
+                style={{ backgroundColor: item.color }}
+              >
                 <div className="d-flex align-items-center gap-3">
                   <img src={item.image} alt="i" />
                   <div>

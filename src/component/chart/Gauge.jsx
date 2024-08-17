@@ -34,7 +34,7 @@ const Gauge = () => {
           <li className="d-flex justify-content-between">
             <p className="c-darkGrey f-13 mb-2">
               {" "}
-              <BsFillSquareFill className="f-10 c-darkGreen" />
+              <BsFillSquareFill className="f-10 square-icon c-darkGreen" />
               &nbsp; Present
             </p>
             <p className="f-14 fw-700 mb-2">3700</p>
@@ -42,7 +42,7 @@ const Gauge = () => {
           <li className="d-flex justify-content-between">
             <p className="c-darkGrey f-13 mb-2">
               {" "}
-              <BsFillSquareFill className="f-10 c-green" />
+              <BsFillSquareFill className="f-10 square-icon c-green" />
               &nbsp; Late
             </p>
             <p className="f-14 fw-700 mb-2">628</p>
@@ -50,7 +50,7 @@ const Gauge = () => {
           <li className="d-flex justify-content-between">
             <p className="c-darkGrey f-13 mb-0">
               {" "}
-              <BsFillSquareFill className="f-10 c-lightGreen" />
+              <BsFillSquareFill className="f-10 square-icon c-lightGreen" />
               &nbsp; Absent
             </p>
             <p className="f-14 fw-700 mb-0">4,350</p>
