@@ -131,3 +131,50 @@ export const TalukbasedList = [
   { label: "Chidamparam", count: 230, color: "#9D95DB" },
   { label: "Anna Nagar", count: 210, color: "#BEB9E7" },
 ];
+export const GenderbasedList = [
+  { label: "Women", count: 68, color: "#7263E9" },
+  { label: "Men", count: 32, color: "#E7B92E" },
+];
+export const EmotionbasedList = [
+  { label: "Happy", count: 68, color: "#52CC7B" },
+  { label: "Sad", count: 12, color: "#FF4444" },
+  { label: "Neutral", count: 20, color: "#FFCD35" },
+];
+export const CrowdBasedList = [
+  {
+    label: "Gold",
+    color: "#5C4FC3",
+    bgColor: "#F3F2FF",
+    percentage: "24%",
+    count: 450,
+  },
+  {
+    label: "Platinum",
+    color: "#FF4444",
+    bgColor: "#FFE9EA",
+    percentage: "30%",
+    count: 340,
+  },
+  {
+    label: "Diamond",
+    color: "#52CC7B",
+    bgColor: "#E8FDEC",
+    percentage: "16%",
+    count: 698,
+  },
+  {
+    label: "Silver",
+    color: "#FFCD35",
+    bgColor: "#FFF9E6",
+    percentage: "30%",
+    count: 227,
+  },
+];
+export const AgeList = [
+  { label: "13-17", percentage: 8.4 },
+  { label: "18-24", percentage: 50.1 },
+  { label: "25-34", percentage: 28.6 },
+  { label: "35-44", percentage: 6.1 },
+  { label: "45-54", percentage: 4.1 },
+  { label: "55+", percentage: 2.4 },
+];

@@ -144,6 +144,22 @@ svg {
   left: 8px;
   top: 9px;
 }
+.border-with-curved-ends {
+  position: relative;
+  padding-left: 20px; /* Adjust this to make space for the curved border */
+}
+
+.border-with-curved-ends::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 0;
+  width: 3px;
+  height: 10px;
+  background-color: #5c4fc3;
+  border-radius: 12px;
+}
 .header {
   border-bottom: 0.4px solid #d4dde7;
   background-color: #ffffff;

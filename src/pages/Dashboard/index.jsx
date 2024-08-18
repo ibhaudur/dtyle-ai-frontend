@@ -9,6 +9,9 @@ import Facerecognition from "./components/Facerecognition";
 import PersonList from "./components/PersonList";
 import LicensePlate from "./components/LicensePlate";
 import ANPR from "./components/ANPR";
+import GenderAndEmotion from "./components/GenderAndEmotion";
+import CrowdDetection from "./components/CrowdDetection";
+import AgePercentage from "./components/AgePercentage";
 const Dashboard = () => {
   return (
     <React.Fragment>
@@ -38,6 +41,15 @@ const Dashboard = () => {
           </Col>
           <Col md={12} lg={8}>
             <LicensePlate />
+          </Col>
+          <Col md={12} lg={4}>
+            <GenderAndEmotion />
+          </Col>
+          <Col md={12} lg={8}>
+            <CrowdDetection />
+          </Col>
+          <Col md={12} lg={4}>
+            <AgePercentage />
           </Col>
         </Row>
       </Container>

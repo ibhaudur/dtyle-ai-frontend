@@ -5,6 +5,7 @@ import vehicle from "../../../../public/image/dashboard/licence/car.svg";
 import CustomTable from "../../../component/Table/CustomTable";
 import Pagination from "../../../component/Pagination/Pagination";
 import { VehicleHead } from "../utils";
+import SearchBox from "../../../component/Forms/SearchBox";
 
 const LicensePlate = () => {
   return (
@@ -32,11 +33,12 @@ const LicensePlate = () => {
         </Col>
         <Col xs={12} md={7}>
           <div className="py-3">
-            <div>
-              <p className="f-14 fw-600">450 vehicles listed</p>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <p className="f-14 fw-600 mb-0">450 vehicles listed</p>
+              <SearchBox />
             </div>
             <CustomTable header={VehicleHead} />
-            <Pagination/>
+            <Pagination />
           </div>
         </Col>
       </Row>
