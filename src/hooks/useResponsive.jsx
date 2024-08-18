@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 function useResponsive() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
+    isMobileDevice: undefined,
     isMobile: undefined,
     isLaptop: undefined,
   });
@@ -10,11 +11,13 @@ function useResponsive() {
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
+      const isMobileDevice = width < 568;
       const isMobile = width < 768;
       const isLaptop = width > 768;
 
       setWindowSize({
         width,
+        isMobileDevice,
         isMobile,
         isLaptop,
       });

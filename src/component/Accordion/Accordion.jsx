@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import CCTVIcon from "../Icon/CCTVIcon";
 
-const Accordion = ({ list }) => {
+const Accordion = ({ list, setOpen }) => {
   const [openIndex, setOpenIndex] = useState(0);
   const toggleFaq = (index) => {
     if (openIndex === index) {
@@ -58,13 +58,21 @@ const Accordion = ({ list }) => {
               {item.answer.map((ans, i) => (
                 <li
                   key={i}
-                  className="d-flex f-13 justify-content-between align-items-center px-3 py-2"
+                  onClick={() => setOpen(true)}
+                  className="d-flex f-13 justify-content-between cursor-pointer align-items-center px-3 py-1"
                 >
                   <small className=" fw-700 Helvetica Neue">
                     <CCTVIcon /> {ans.camera}
                   </small>
                   <small className="c-lightGrey">{ans.date_time}</small>
-                  <button className="c-blue Helvetica Neue">Ignore</button>
+                  <button
+                    className="c-blue Helvetica Neue"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    Ignore
+                  </button>
                 </li>
               ))}
             </ul>

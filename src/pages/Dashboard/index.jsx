@@ -39,16 +39,16 @@ const Dashboard = () => {
           <Col md={6} lg={4} className="px-2">
             <ANPR />
           </Col>
-          <Col md={12} lg={8}>
+          <Col md={12} lg={8} className="px-2">
             <LicensePlate />
           </Col>
-          <Col md={12} lg={4}>
+          <Col md={12} lg={4} className="px-2">
             <GenderAndEmotion />
           </Col>
-          <Col md={12} lg={8}>
+          <Col md={12} lg={8} className="px-2">
             <CrowdDetection />
           </Col>
-          <Col md={12} lg={4}>
+          <Col md={12} lg={4} className="px-2">
             <AgePercentage />
           </Col>
         </Row>

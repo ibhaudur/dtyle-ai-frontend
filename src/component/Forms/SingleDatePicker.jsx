@@ -3,8 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const SingleDatePicker = () => {
-  const [date, setDate] = useState(null);
+const SingleDatePicker = ({ withoutBorder, date, setDate }) => {
 
   const handleDateChange = (selectedDate) => {
     setDate(selectedDate);
@@ -31,15 +30,21 @@ const SingleDatePicker = () => {
       <DatePicker
         selected={date || new Date()}
         onChange={handleDateChange}
-        className="input-style single-date"
+        className={`${
+          withoutBorder
+            ? "single-date-without-border cursor-pointer"
+            : "input-style single-date"
+        }`}
         showYearDropdown
-        dateFormat="MMMM, dd/yyyy"
+        dateFormat={withoutBorder ? "eee, dd MMM YYYY" : "MMMM, dd/yyyy"}
         placeholderText="Select Date"
       />
-      <div className="d-flex gap-2">
-        <IoIosArrowBack className="icon" onClick={decreaseDate} />
-        <IoIosArrowForward className="icon" onClick={increaseDate} />
-      </div>
+      {!withoutBorder && (
+        <div className="d-flex gap-2">
+          <IoIosArrowBack className="icon" onClick={decreaseDate} />
+          <IoIosArrowForward className="icon" onClick={increaseDate} />
+        </div>
+      )}
     </div>
   );
 };

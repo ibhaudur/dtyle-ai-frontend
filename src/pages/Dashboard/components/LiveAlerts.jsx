@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Alert from "../../../../public/image/dashboard/live-alert/alert.svg";
+import Trespasers from "../../../../public/image/dashboard/live-alert/trespasers.png";
 import Accordion from "../../../component/Accordion/Accordion";
 import { AlertList } from "../utils";
-import CustomInput from "../../../component/Forms/CustomInput";
+import ModalBox from "../../../component/Modal/ModalBox";
+import CCTVIcon from "../../../component/Icon/CCTVIcon";
+import SingleDatePicker from "../../../component/Forms/SingleDatePicker";
+import CustomDateUi from "../../../component/UI/CustomDateUi";
 const LiveAlerts = () => {
+  const [open, setOpen] = useState(false);
+  const [date, setDate] = useState(new Date());
   return (
     <section className="custom-cards alerts p-3">
+      <ModalBox title="Trespass Deduction" open={open} setOpen={setOpen}>
+        <React.Fragment>
+          <div className="bg-lightblue accordion rounded d-flex f-13 justify-content-between cursor-pointer align-items-center px-3 py-2">
+            <small className=" fw-700 Helvetica Neue">
+              <CCTVIcon /> CAM0003
+            </small>
+            <small className="c-lightGrey">20th July 2023 at 05:47:25 PM</small>
+            <button className="c-blue Helvetica Neue">Ignore</button>
+          </div>{" "}
+          <img src={Trespasers} className="w-100 mt-2" alt="trespasers" />
+        </React.Fragment>
+      </ModalBox>
       <div className="d-flex justify-content-between align-items-center">
         <div className="d-flex gap-3">
           <img src={Alert} alt="i" />
@@ -14,28 +32,25 @@ const LiveAlerts = () => {
             <p className="f-13 mb-0 c-lightGrey">All alerts are listed here </p>
           </div>
         </div>
-        <div>
-          <CustomInput
-            type="select"
-            options={[
-              { id: "option1", label: "Option 1" },
-              { id: "option2", label: "Option 2" },
-            ]}
-            defaultlabel="Select Camera"
-            valKey="id"
-            labelKey="label"
-          />
+        <div className="Helvetica Neue d-flex align-items-center gap-2 c-lightGrey f-13 fw-700 mb-1">
+          Date :{" "}
+          <SingleDatePicker
+            withoutBorder={true}
+            date={date}
+            setDate={setDate}
+          />{" "}
         </div>
       </div>
+      <CustomDateUi date={date} setDate={setDate} />
       <div className="d-flex align-items-center justify-content-between mt-3">
         <hr className="flex-grow-1" />
         <span className="mx-2 f-24 fw-700 Helvetica Neue c-blue">1,532</span>
         <hr className="flex-grow-1" />
       </div>
       <p className="text-center c-lightGrey">
-        Total events in <span className="fw-700 c-black">65</span> areas
+        Total incidents in <span className="fw-700 c-black">65</span> areas
       </p>
-      <Accordion list={AlertList} />
+      <Accordion list={AlertList} setOpen={setOpen} />
     </section>
   );
 };

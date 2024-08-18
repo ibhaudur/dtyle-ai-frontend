@@ -9,7 +9,7 @@ import SearchBox from "../../../component/Forms/SearchBox";
 
 const LicensePlate = () => {
   return (
-    <div className="custom-cards px-2">
+    <div className="custom-cards px-2 mb-3">
       <Row className="camera-overview">
         <Col xs={12} md={5} className="p-3 box1">
           <div className="d-flex align-items-center gap-3 mb-3">

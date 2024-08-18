@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { AnalticsList } from "../utils";
 import SingleDatePicker from "../../../component/Forms/SingleDatePicker";
 
 const Analytics = () => {
+  const [date, setDate] = useState(null);
+
   return (
     <section className="custom-cards p-3">
       <div className="d-flex justify-content-between align-items-center mb-2">
         <p className="fw-700 Helvetica Neue mb-0">Analytics</p>
         <div>
-          <SingleDatePicker />
+          <SingleDatePicker date={date} setDate={setDate} />
         </div>
       </div>
       <Row className="px-2">

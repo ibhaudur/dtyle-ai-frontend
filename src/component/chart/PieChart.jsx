@@ -35,16 +35,16 @@ const PieChart = ({ title, list }) => {
   };
 
   return (
-    <Row className="align-items-center py-2">
-      <Col md={5}>
+    <Row className="justify-content-center align-items-center py-2">
+      <Col xs={8} sm={5} lg={5}>
         <Pie data={transformedData} options={options} />
         <p className="mb-2 text-center f-13 fw-600 mt-3">{title}</p>
       </Col>
-      <Col md={7}>
+      <Col xs={12} sm={7} lg={7}>
         <div>
           <ul className="mb-0 px-2">
             {list.map((item, index) => (
-              <li className="d-flex justify-content-between">
+              <li key={index} className="d-flex justify-content-between">
                 <p className="c-darkGrey fw-600 f-13 mb-2">
                   {" "}
                   <BsFillSquareFill

@@ -5,7 +5,7 @@ import { BsFillSquareFill } from "react-icons/bs";
 const Gauge = () => {
   return (
     <React.Fragment>
-      <div className="chart-gauge">
+      <div className="chart-gauge mt-3">
         <GaugeComponent
           // value={50}
           type="semicircle"
@@ -30,16 +30,16 @@ const Gauge = () => {
         </div>
       </div>
       <div>
-        <ul className="mb-0 px-2">
+        <ul className="mb-0 px-2 mt-4">
           <li className="d-flex justify-content-between">
             <p className="c-darkGrey f-13 mb-2">
               {" "}
               <BsFillSquareFill className="f-10 square-icon c-darkGreen" />
-              &nbsp; Present
+              &nbsp; Suspected Count
             </p>
             <p className="f-14 fw-700 mb-2">3700</p>
           </li>
-          <li className="d-flex justify-content-between">
+          {/* <li className="d-flex justify-content-between">
             <p className="c-darkGrey f-13 mb-2">
               {" "}
               <BsFillSquareFill className="f-10 square-icon c-green" />
@@ -54,7 +54,7 @@ const Gauge = () => {
               &nbsp; Absent
             </p>
             <p className="f-14 fw-700 mb-0">4,350</p>
-          </li>
+          </li> */}
         </ul>
       </div>
     </React.Fragment>

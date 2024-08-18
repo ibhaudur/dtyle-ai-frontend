@@ -36,13 +36,17 @@ const DonutChart = ({ title, list }) => {
 
   return (
     <Row className="align-items-center donut py-2">
-      <Col md={4} className="position-relative d-flex justify-content-center align-items-center">
+      <Col
+        md={4}
+        lg={4}
+        className="position-relative mb-2 d-flex justify-content-center align-items-center"
+      >
         <Doughnut data={transformedData} options={options} />
         <div className="position-absolute text-center">
           <strong className="mb-0 f-16 fw-700">100%</strong>
         </div>
       </Col>
-      <Col md={8}>
+      <Col md={7} lg={8}>
         <div>
           <ul className="mb-0 px-2">
             {list.map((item, index) => (
