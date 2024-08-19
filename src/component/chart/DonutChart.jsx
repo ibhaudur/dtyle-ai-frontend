@@ -35,7 +35,7 @@ const DonutChart = ({ title, list }) => {
   };
 
   return (
-    <Row className="align-items-center donut py-2">
+    <Row className="align-items-center donut py-1">
       <Col
         md={4}
         lg={4}

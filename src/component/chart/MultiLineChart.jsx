@@ -95,7 +95,7 @@ const MultiLineChart = () => {
       },
       {
         label: "Silver",
-        data: [18, 28, 50, 29, 6, 37, 60, 28, 50, 29],
+        data: [12, 22, 50, 29, 6, 37, 60, 28, 50, 49],
         borderColor: "#FFCD35",
         borderWidth: 2,
         fill: false,

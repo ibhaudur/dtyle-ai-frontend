@@ -21,7 +21,7 @@ const rows = [
 
 export default function CustomTable({ header }) {
   return (
-    <TableContainer className="mb-3">
+    <TableContainer className="mb-4">
       <Table sx={{ minWidth: 450 }} size="small" aria-label="a dense table">
         <TableHead
           className="thead"

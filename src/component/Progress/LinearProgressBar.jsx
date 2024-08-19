@@ -1,10 +1,6 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import CircularProgress, {
-  circularProgressClasses,
-} from "@mui/material/CircularProgress";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
@@ -18,14 +14,21 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 20,
-    backgroundColor: theme.palette.mode === "light" ? "#5C4FC3" : "#F5F7F9",
   },
 }));
 
-export default function LinearProgressBar({ count }) {
+export default function LinearProgressBar({ count, color }) {
   return (
     <Stack spacing={2} sx={{ flexGrow: 1 }}>
-      <BorderLinearProgress variant="determinate" value={count} />
+      <BorderLinearProgress
+        variant="determinate"
+        value={count}
+        sx={{
+          "& .MuiLinearProgress-bar": {
+            backgroundColor: color || "#5C4FC3",
+          },
+        }}
+      />
     </Stack>
   );
 }

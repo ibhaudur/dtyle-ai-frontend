@@ -113,23 +113,23 @@ export const AlertList = [
 export const VehicleHead = ["License Number", "Entry Time", "State", "Taluk"];
 
 export const StatebasedList = [
-  { label: "Tamil Nadu", count: 500, color: "#25204E" },
-  { label: "Kerala", count: 300, color: "#372F75" },
-  { label: "Karnataka", count: 520, color: "#4A3F9C" },
-  { label: "Andhra", count: 443, color: "#5C4FC3" },
-  { label: "Pondichery", count: 375, color: "#7D72CF" },
-  { label: "Delhi", count: 230, color: "#9D95DB" },
-  { label: "Kolkata", count: 310, color: "#BEB9E7" },
+  { label: "Tamil Nadu", count: 500, color: "#5C4FC3" },
+  { label: "Kerala", count: 300, color: "#51A8FA" },
+  { label: "Karnataka", count: 520, color: "#4EE176" },
+  { label: "Andhra", count: 443, color: "#E7274F" },
+  { label: "Pondichery", count: 375, color: "#F3763F" },
+  { label: "Delhi", count: 230, color: "#7187BA" },
+  { label: "Kolkata", count: 310, color: "#FECF16" },
 ];
 
 export const TalukbasedList = [
-  { label: "Madippakkam", count: 300, color: "#25204E" },
-  { label: "Perundurai", count: 280, color: "#372F75" },
-  { label: "Seergali", count: 320, color: "#4A3F9C" },
-  { label: "Ram Nagar", count: 343, color: "#5C4FC3" },
-  { label: "Keelkattalai", count: 375, color: "#7D72CF" },
-  { label: "Chidamparam", count: 230, color: "#9D95DB" },
-  { label: "Anna Nagar", count: 210, color: "#BEB9E7" },
+  { label: "Madippakkam", count: 300, color: "#5C4FC3" },
+  { label: "Perundurai", count: 280, color: "#51A8FA" },
+  { label: "Seergali", count: 320, color: "#4EE176" },
+  { label: "Ram Nagar", count: 343, color: "#E7274F" },
+  { label: "Keelkattalai", count: 375, color: "#F3763F" },
+  { label: "Chidamparam", count: 230, color: "#7187BA" },
+  { label: "Anna Nagar", count: 210, color: "#FECF16" },
 ];
 export const GenderbasedList = [
   { label: "Women", count: 68, color: "#7263E9" },
@@ -172,9 +172,9 @@ export const CrowdBasedList = [
 ];
 export const AgeList = [
   { label: "13-17", percentage: 8.4 },
-  { label: "18-24", percentage: 50.1 },
-  { label: "25-34", percentage: 28.6 },
-  { label: "35-44", percentage: 6.1 },
-  { label: "45-54", percentage: 4.1 },
-  { label: "55+", percentage: 2.4 },
+  { label: "18-24", percentage: 50.1, color: "#51A8FA" },
+  { label: "25-34", percentage: 28.6, color: "#4EE176" },
+  { label: "35-44", percentage: 6.1, color: "#E7274F" },
+  { label: "45-54", percentage: 4.1, color: "#F3763F" },
+  { label: "55+", percentage: 2.4, color: "#FECF16" },
 ];

@@ -19,7 +19,7 @@ const AgePercentage = () => {
         <div key={index} className="py-2 mb-1">
           <label className="f-12 Helvetica Neue">{item.label}</label>
           <div className="d-flex gap-3 align-items-center">
-            <LinearProgressBar count={item.percentage} />
+            <LinearProgressBar count={item.percentage} color={item.color} />
             <p className="mb-0 Helvetica Neue f-13 fw-700">
               {item.percentage}%
             </p>
