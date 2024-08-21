@@ -25,7 +25,7 @@ const Gauge = () => {
           }}
         />
         <div className="content">
-          <p className="mb-0 text-center f-24 fw-700">8,560</p>
+          <p className="mb-0 text-center f-24 fw-700">904</p>
           <p className="text-center c-lightGrey mb-0 f-12">Total count</p>
         </div>
       </div>
@@ -37,7 +37,7 @@ const Gauge = () => {
               <BsFillSquareFill className="f-10 square-icon c-darkGreen" />
               &nbsp; Suspected Count
             </p>
-            <p className="f-14 fw-700 mb-2">3700</p>
+            <p className="f-14 fw-700 mb-2">1</p>
           </li>
           {/* <li className="d-flex justify-content-between">
             <p className="c-darkGrey f-13 mb-2">

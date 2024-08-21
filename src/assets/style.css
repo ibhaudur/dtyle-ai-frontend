@@ -309,6 +309,17 @@ svg {
 .pagination .icon:hover {
   background-color: #eceaff;
 }
+.icons {
+  padding: 8px;
+  background-color: #f5f7f9;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.icons:hover {
+  background-color: #eceaff;
+}
 .pointer,
 .value-text,
 .tick-value,

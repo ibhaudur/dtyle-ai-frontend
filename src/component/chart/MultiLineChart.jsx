@@ -71,7 +71,7 @@ const MultiLineChart = () => {
     datasets: [
       {
         label: "Gold",
-        data: [55, 59, 80, 81, 56, 55, 40, 59, 80, 8],
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         borderColor: "#5C4FC3",
         borderWidth: 2,
         fill: false,
@@ -79,7 +79,7 @@ const MultiLineChart = () => {
       },
       {
         label: "Platinum",
-        data: [28, 48, 40, 19, 86, 27, 90, 48, 40, 19],
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         borderColor: "#FF4444",
         borderWidth: 2,
         fill: false,
@@ -87,7 +87,7 @@ const MultiLineChart = () => {
       },
       {
         label: "Diamond",
-        data: [18, 28, 50, 29, 76, 37, 60, 28, 50, 29],
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         borderColor: "#52CC7B",
         borderWidth: 2,
         fill: false,

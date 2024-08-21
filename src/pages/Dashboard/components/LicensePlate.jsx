@@ -4,7 +4,7 @@ import licence from "../../../../public/image/dashboard/licence/licence.svg";
 import vehicle from "../../../../public/image/dashboard/licence/car.svg";
 import CustomTable from "../../../component/Table/CustomTable";
 import Pagination from "../../../component/Pagination/Pagination";
-import { VehicleHead } from "../utils";
+import { NumberPlateList, VehicleHead } from "../utils";
 import SearchBox from "../../../component/Forms/SearchBox";
 
 const LicensePlate = () => {
@@ -29,15 +29,15 @@ const LicensePlate = () => {
             <img src={vehicle} alt="vehicle" />
           </div>
           <p className="text-center f-14">Total vehicles</p>
-          <h3 className="text-center fw-700 f-32 mb-0">460</h3>
+          <h3 className="text-center fw-700 f-32 mb-0">5</h3>
         </Col>
         <Col xs={12} md={7}>
           <div className="py-3">
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <p className="f-14 fw-600 mb-0">450 vehicles listed</p>
+              <p className="f-14 fw-600 mb-0">5 vehicles listed</p>
               <SearchBox />
             </div>
-            <CustomTable header={VehicleHead} />
+            <CustomTable header={VehicleHead} list={NumberPlateList}/>
             <Pagination />
           </div>
         </Col>

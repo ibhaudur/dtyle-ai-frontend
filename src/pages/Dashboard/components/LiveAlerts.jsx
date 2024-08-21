@@ -9,10 +9,12 @@ import SingleDatePicker from "../../../component/Forms/SingleDatePicker";
 import CustomDateUi from "../../../component/UI/CustomDateUi";
 const LiveAlerts = () => {
   const [open, setOpen] = useState(false);
+  const [details, setDetails] = useState({});
   const [date, setDate] = useState(new Date());
+  console.log(details);
   return (
     <section className="custom-cards alerts p-3">
-      <ModalBox title="Trespass Deduction" open={open} setOpen={setOpen}>
+      <ModalBox title={details.title} open={open} setOpen={setOpen}>
         <React.Fragment>
           <div className="bg-lightblue accordion rounded d-flex f-13 justify-content-between cursor-pointer align-items-center px-3 py-2">
             <small className=" fw-700 Helvetica Neue">
@@ -21,7 +23,7 @@ const LiveAlerts = () => {
             <small className="c-lightGrey">20th July 2023 at 05:47:25 PM</small>
             <button className="c-blue Helvetica Neue">Ignore</button>
           </div>{" "}
-          <img src={Trespasers} className="w-100 mt-2" alt="trespasers" />
+          <img src={details.image} className="w-100 mt-2" alt="trespasers" />
         </React.Fragment>
       </ModalBox>
       <div className="d-flex justify-content-between align-items-center">
@@ -50,7 +52,7 @@ const LiveAlerts = () => {
       <p className="text-center c-lightGrey">
         Total incidents in <span className="fw-700 c-black">65</span> areas
       </p>
-      <Accordion list={AlertList} setOpen={setOpen} />
+      <Accordion list={AlertList} setOpen={setOpen} setDetails={setDetails} />
     </section>
   );
 };
