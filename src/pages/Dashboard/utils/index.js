@@ -5,9 +5,10 @@ import trespassers from "../../../../public/image/dashboard/analytics/trespasser
 
 export const AnalticsList = [
   {
-    title: "People In & Out",
+    title: "People",
     image: people,
-    count: "2,084",
+    count: "In 1,084",
+    count1: "Out 906",
     desc: "People count of enter and exited",
     color: "#E8FDEC",
   },
@@ -109,12 +110,17 @@ export const AlertList = [
     answer: [],
   },
 ];
-export const VehicleHead = ["License Number", "Entry Time", "State", "Taluk"];
+export const VehicleHead = [
+  "License Number",
+  "In Time",
+  "Out time",
+  "Duration",
+];
 
 export const StatebasedList = [
-  { label: "Tamil Nadu", count: 6, color: "#5C4FC3" },
+  { label: "Tamil Nadu", count: 6, color: "#BEB9E7" },
   // { label: "Kerala", count: 300, color: "#51A8FA" },
-  { label: "Karnataka", count: 1, color: "#4EE176" },
+  { label: "Karnataka", count: 1, color: "#7187BA" },
   // { label: "Andhra", count: 443, color: "#E7274F" },
   // { label: "Pondichery", count: 375, color: "#F3763F" },
   // { label: "Delhi", count: 230, color: "#7187BA" },
@@ -122,12 +128,12 @@ export const StatebasedList = [
 ];
 
 export const TalukbasedList = [
-  { label: "Bengaluru", count: 1, color: "#5C4FC3" },
-  { label: "Chennai(North)", count: 1, color: "#51A8FA" },
-  { label: "Nagercoil", count: 1, color: "#4EE176" },
-  { label: "Virugambakkam", count: 1, color: "#E7274F" },
-  { label: "Sholinganallur", count: 2, color: "#F3763F" },
-  { label: "K.K. Nagar", count: 1, color: "#7187BA" },
+  { label: "Bengaluru", count: 1, color: "#BEB9E7" },
+  { label: "Chennai(North)", count: 1, color: "#9D95DB" },
+  { label: "Nagercoil", count: 1, color: "#7D72C4" },
+  { label: "Virugambakkam", count: 1, color: "#5C4FC3" },
+  { label: "Sholinganallur", count: 2, color: "#4A3F9C" },
+  { label: "K.K. Nagar", count: 1, color: "#25204E" },
   // { label: "Anna Nagar", count: 210, color: "#FECF16" },
 ];
 export const GenderbasedList = [
@@ -144,25 +150,25 @@ export const CrowdBasedList = [
     label: "Gold",
     color: "#5C4FC3",
     bgColor: "#F3F2FF",
-    percentage: "0%",
+    percentage: "8%",
   },
   {
     label: "Platinum",
     color: "#FF4444",
     bgColor: "#FFE9EA",
-    percentage: "0%",
+    percentage: "4%",
   },
   {
     label: "Diamond",
     color: "#52CC7B",
     bgColor: "#E8FDEC",
-    percentage: "0%",
+    percentage: "3%",
   },
   {
     label: "Silver",
     color: "#FFCD35",
     bgColor: "#FFF9E6",
-    percentage: "100%",
+    percentage: "85%",
   },
 ];
 export const AgeList = [
@@ -178,21 +184,43 @@ export const NumberPlateList = [
   {
     license: "TN05AV2836",
     time: "",
-    state: "Tamil Nadu",
-    taluk: "CHENNAI(NORTH)",
+    state: "4:25:40 PM",
+    taluk: "-",
   },
-  { license: "TN74S9314", time: "", state: "Tamil Nadu", taluk: "Nagercoil" },
+  { license: "TN74S9314", time: "", state: "4:27:38 PM", taluk: "-" },
   {
     license: "TN10AV7276",
     time: "04:27:55 PM",
-    state: "Tamil Nadu",
-    taluk: "Virugambakkam",
+    state: "-",
+    taluk: "-",
   },
-  { license: "KA05MT5057", time: "", state: "Karnataka", taluk: "Bengaluru" },
+  { license: "KA05MT5057", time: "", state: "4:33:07 PM", taluk: "-" },
   {
     license: "TN14AD3965",
     time: "",
-    state: "Tamil Nadu",
-    taluk: "SHOLINGANALLUR",
+    state: "4:33:34 PM",
+    taluk: "-",
+  },
+];
+export const PeopleList = [
+  {
+    name: "Raja",
+    time: "09:47:25 AM",
+  },
+  {
+    name: "Jhon",
+    time: "09:57:45 AM",
+  },
+  {
+    name: "Sathish",
+    time: "10:20:25 AM",
+  },
+  {
+    name: "Sweatha",
+    time: "11:27:25 AM",
+  },
+  {
+    name: "Jasmine",
+    time: "12:45:55 PM",
   },
 ];

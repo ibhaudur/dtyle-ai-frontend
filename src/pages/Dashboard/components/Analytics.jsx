@@ -24,9 +24,16 @@ const Analytics = () => {
               >
                 <div className="d-flex align-items-center gap-3">
                   <img src={item.image} alt="i" />
-                  <div>
+                  <div className="w-100">
                     <p className="f-14 mb-0">{item.title}</p>
-                    <p className="f-18 fw-700 mb-0">{item.count}</p>
+                    <div className="d-flex">
+                      <p className="f-18 flex-grow-1 fw-700 mb-0">
+                        {item.count}
+                      </p>
+                      <p className="f-18 flex-grow-1 fw-700 mb-0">
+                        {item.count1}
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <small className="c-lightGrey f-12">{item.desc}</small>

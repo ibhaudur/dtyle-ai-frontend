@@ -11,14 +11,14 @@ const ANPR = () => {
         <img src={anpr} alt="i" />
         <div>
           <p className="fw-700 Helvetica Neue mb-0">ANPR Classification</p>
-          <p className="f-13 mb-0 c-lightGrey">State & Taluk based counts </p>
+          <p className="f-13 mb-0 c-lightGrey">State & RTO based counts </p>
         </div>
       </div>
       <div className="border-bottom py-3">
         <PieChart title="State based count" list={StatebasedList} />
       </div>
       <div className="py-3 mt-3">
-        <PieChart title="Taluk based count" list={TalukbasedList} />
+        <PieChart title="RTO based count" list={TalukbasedList} />
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ const GenderAndEmotion = () => {
         <DonutChart title="State based count" list={GenderbasedList} />
       </div>
       <div className="mt-3">
-        <DonutChart title="Taluk based count" list={EmotionbasedList} />
+        <DonutChart title="RTO based count" list={EmotionbasedList} />
       </div>
     </section>
   );
