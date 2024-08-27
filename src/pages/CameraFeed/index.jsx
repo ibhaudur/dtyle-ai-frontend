@@ -4,6 +4,7 @@ import RuleDetails from "./component/RuleDetails";
 import "./Camerafeed.css";
 import CustomAndAlert from "./component/CustomAndAlert";
 import CameraMonitor from "./component/CameraMonitor";
+import ActionManagement from "./component/ActionManagement";
 
 const CameraFeed = () => {
   return (
@@ -15,6 +16,7 @@ const CameraFeed = () => {
         </Col>
         <Col md={6} className="px-2">
           <CameraMonitor />
+          <ActionManagement />
         </Col>
       </Row>
     </React.Fragment>

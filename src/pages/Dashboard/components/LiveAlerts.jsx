@@ -11,16 +11,15 @@ const LiveAlerts = () => {
   const [open, setOpen] = useState(false);
   const [details, setDetails] = useState({});
   const [date, setDate] = useState(new Date());
-  console.log(details);
   return (
     <section className="custom-cards alerts p-3">
       <ModalBox title={details.title} open={open} setOpen={setOpen}>
         <React.Fragment>
           <div className="bg-lightblue accordion rounded d-flex f-13 justify-content-between cursor-pointer align-items-center px-3 py-2">
             <small className=" fw-700 Helvetica Neue">
-              <CCTVIcon /> CAM0003
+              <CCTVIcon /> {details.camera}
             </small>
-            <small className="c-lightGrey">20th July 2023 at 05:47:25 PM</small>
+            <small className="c-lightGrey">{details.date_time}</small>
             <button className="c-blue Helvetica Neue">Ignore</button>
           </div>{" "}
           <img src={details.image} className="w-100 mt-2" alt="trespasers" />
