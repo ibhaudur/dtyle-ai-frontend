@@ -17,7 +17,7 @@ const ActionManagement = () => {
               <CCTVIcon /> {details?.camera}
             </small>
             <small className="c-lightGrey">{details?.date_time}</small>
-            <button className="c-blue Helvetica Neue">Ignore</button>
+            <button className="c-red btn-red Helvetica Neue">Ignore</button>
           </div>{" "}
           <img src={details.image} className="w-100 mt-2" alt="trespasers" />
         </React.Fragment>
@@ -63,7 +63,7 @@ const ActionManagement = () => {
                 </small>
                 <small className="c-lightGrey">{ans.date_time}</small>
                 <button
-                  className="c-blue Helvetica Neue"
+                  className="c-red Helvetica Neue btn-red"
                   onClick={(e) => {
                     e.stopPropagation();
                   }}
@@ -106,7 +106,7 @@ const ActionManagement = () => {
                   </small>
                   <small className="c-lightGrey">{ans.date_time}</small>
                   <button
-                    className="c-blue Helvetica Neue"
+                    className="c-red btn-red Helvetica Neue"
                     onClick={(e) => {
                       e.stopPropagation();
                     }}
