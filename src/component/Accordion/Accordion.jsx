@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import CCTVIcon from "../Icon/CCTVIcon";
 
-const Accordion = ({ list }) => {
+const Accordion = ({ list, setOpen, setDetails }) => {
   const [openIndex, setOpenIndex] = useState(0);
   const toggleFaq = (index) => {
     if (openIndex === index) {
@@ -54,20 +54,35 @@ const Accordion = ({ list }) => {
             }`}
           >
             {/* <p className="mt-2 mb-0">{item.answer}</p> */}
-            <ul className="mb-0 p-0">
-              {item.answer.map((ans, i) => (
-                <li
-                  key={i}
-                  className="d-flex f-13 justify-content-between align-items-center px-3 py-2"
-                >
-                  <small className=" fw-700 Helvetica Neue">
-                    <CCTVIcon /> {ans.camera}
-                  </small>
-                  <small className="c-lightGrey">{ans.date_time}</small>
-                  <button className="c-blue Helvetica Neue">Ignore</button>
-                </li>
-              ))}
-            </ul>
+            {item.answer.length > 0 ? (
+              <ul className="mb-0 p-0">
+                {item.answer.map((ans, i) => (
+                  <li
+                    key={i}
+                    onClick={() => {
+                      setOpen(true);
+                      setDetails({ ...ans, title: item.question });
+                    }}
+                    className="d-flex f-13 justify-content-between cursor-pointer align-items-center px-3 py-1"
+                  >
+                    <small className=" fw-700 Helvetica Neue">
+                      <CCTVIcon /> {ans.camera}
+                    </small>
+                    <small className="c-lightGrey">{ans.date_time}</small>
+                    <button
+                      className="c-blue Helvetica Neue"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                      }}
+                    >
+                      Ignore
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mb-0 text-center f-13">No Data!</p>
+            )}
           </div>
         </div>
       ))}

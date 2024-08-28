@@ -7,7 +7,11 @@ import Analytics from "./components/Analytics";
 import LiveAlerts from "./components/LiveAlerts";
 import Facerecognition from "./components/Facerecognition";
 import PersonList from "./components/PersonList";
-import HeatMap from "./components/HeatMap";
+import LicensePlate from "./components/LicensePlate";
+import ANPR from "./components/ANPR";
+import GenderAndEmotion from "./components/GenderAndEmotion";
+import CrowdDetection from "./components/CrowdDetection";
+import AgePercentage from "./components/AgePercentage";
 const Dashboard = () => {
   return (
     <React.Fragment>
@@ -33,7 +37,19 @@ const Dashboard = () => {
             <PersonList />
           </Col>
           <Col md={6} lg={4} className="px-2">
-            <HeatMap />
+            <ANPR />
+          </Col>
+          <Col md={12} lg={8} className="px-2">
+            <LicensePlate />
+          </Col>
+          <Col md={12} lg={4} className="px-2">
+            <GenderAndEmotion />
+          </Col>
+          <Col md={12} lg={8} className="px-2">
+            <CrowdDetection />
+          </Col>
+          <Col md={12} lg={4} className="px-2">
+            <AgePercentage />
           </Col>
         </Row>
       </Container>
