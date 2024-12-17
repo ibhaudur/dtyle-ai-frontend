@@ -4,6 +4,7 @@ import SwitchButton from "../../../component/Forms/SwitchButton";
 import DateRangePicker from "../../../component/Forms/DateRangePicker";
 import TimeRangePicker from "../../../component/Forms/TimeRangePicker";
 import { CustemAlertField } from "../utils";
+import ParentComponent from "./Parent";
 
 const CustomAndAlert = () => {
   const [dateRange, setDateRange] = useState([null, null]);
