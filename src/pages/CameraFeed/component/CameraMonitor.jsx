@@ -78,12 +78,25 @@ const CameraMonitor = () => {
 
     // Draw all stored lines
     lines.forEach((line) => {
+      // Draw the line
       ctx.beginPath();
       ctx.moveTo(line.start.x, line.start.y);
       ctx.lineTo(line.end.x, line.end.y);
       ctx.strokeStyle = "#34eb5c";
       ctx.lineWidth = 2;
       ctx.stroke();
+
+      // Draw a circle at the start point
+      ctx.beginPath();
+      ctx.arc(line.start.x, line.start.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.fillStyle = "#34eb5c";
+      ctx.fill();
+
+      // Draw a circle at the end point
+      ctx.beginPath();
+      ctx.arc(line.end.x, line.end.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.fillStyle = "#34eb5c";
+      ctx.fill();
     });
 
     // If there's a temporary line, draw it
@@ -94,6 +107,18 @@ const CameraMonitor = () => {
       ctx.strokeStyle = "#34eb5c";
       ctx.lineWidth = 2;
       ctx.stroke();
+
+      // Draw a circle at the start point of the temporary line
+      ctx.beginPath();
+      ctx.arc(tempLine.start.x, tempLine.start.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.fillStyle = "#34eb5c";
+      ctx.fill();
+
+      // Draw a circle at the end point of the temporary line
+      ctx.beginPath();
+      ctx.arc(tempLine.end.x, tempLine.end.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.fillStyle = "#34eb5c";
+      ctx.fill();
     }
   }, [lines, tempLine]);
 
