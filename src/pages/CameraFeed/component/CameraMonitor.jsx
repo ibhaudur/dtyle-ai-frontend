@@ -43,17 +43,22 @@ const CameraMonitor = () => {
   };
 
   const startDrawing = (e) => {
+    const canvas = canvasRef.current;
+    const { offsetX, offsetY } = e.nativeEvent;
+
+    // Calculate percentages
+    const xPercent = (offsetX / canvas.width) * 100;
+    const yPercent = (offsetY / canvas.height) * 100;
+
     if (!startPoint) {
       // First click, set start point
-      const { offsetX, offsetY } = e.nativeEvent;
-      setStartPoint({ x: offsetX, y: offsetY });
+      setStartPoint({ x: xPercent, y: yPercent });
       setTempLine(null); // Clear any previous temporary line
     } else {
       // Second click, finalize the line
-      const { offsetX, offsetY } = e.nativeEvent;
       setLines((prevLines) => [
         ...prevLines,
-        { start: startPoint, end: { x: offsetX, y: offsetY } },
+        { start: startPoint, end: { x: xPercent, y: yPercent } },
       ]);
       setStartPoint(null); // Reset start point for next line
       setTempLine(null); // Clear temporary line
@@ -62,61 +67,79 @@ const CameraMonitor = () => {
 
   const handleMouseMove = (e) => {
     if (startPoint) {
-      // Draw the temporary line while the cursor moves
+      const canvas = canvasRef.current;
       const { offsetX, offsetY } = e.nativeEvent;
-      setTempLine({ start: startPoint, end: { x: offsetX, y: offsetY } });
+
+      // Calculate percentages
+      const xPercent = (offsetX / canvas.width) * 100;
+      const yPercent = (offsetY / canvas.height) * 100;
+
+      // Draw the temporary line while the cursor moves
+      setTempLine({ start: startPoint, end: { x: xPercent, y: yPercent } });
     }
   };
+
   console.log(lines);
   useEffect(() => {
-    // Re-draw all lines and the temporary line whenever the lines or tempLine state changes
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
     // Clear previous drawings
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Helper to convert percentage to pixel
+    const percentToPixel = (percent, total) => (percent / 100) * total;
+
     // Draw all stored lines
     lines.forEach((line) => {
+      const startX = percentToPixel(line.start.x, canvas.width);
+      const startY = percentToPixel(line.start.y, canvas.height);
+      const endX = percentToPixel(line.end.x, canvas.width);
+      const endY = percentToPixel(line.end.y, canvas.height);
+
       // Draw the line
       ctx.beginPath();
-      ctx.moveTo(line.start.x, line.start.y);
-      ctx.lineTo(line.end.x, line.end.y);
+      ctx.moveTo(startX, startY);
+      ctx.lineTo(endX, endY);
       ctx.strokeStyle = "#34eb5c";
       ctx.lineWidth = 2;
       ctx.stroke();
 
       // Draw a circle at the start point
       ctx.beginPath();
-      ctx.arc(line.start.x, line.start.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.arc(startX, startY, 5, 0, 2 * Math.PI);
       ctx.fillStyle = "#34eb5c";
       ctx.fill();
 
       // Draw a circle at the end point
       ctx.beginPath();
-      ctx.arc(line.end.x, line.end.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.arc(endX, endY, 5, 0, 2 * Math.PI);
       ctx.fillStyle = "#34eb5c";
       ctx.fill();
     });
 
-    // If there's a temporary line, draw it
+    // Draw the temporary line if present
     if (tempLine) {
+      const startX = percentToPixel(tempLine.start.x, canvas.width);
+      const startY = percentToPixel(tempLine.start.y, canvas.height);
+      const endX = percentToPixel(tempLine.end.x, canvas.width);
+      const endY = percentToPixel(tempLine.end.y, canvas.height);
+
       ctx.beginPath();
-      ctx.moveTo(tempLine.start.x, tempLine.start.y);
-      ctx.lineTo(tempLine.end.x, tempLine.end.y);
+      ctx.moveTo(startX, startY);
+      ctx.lineTo(endX, endY);
       ctx.strokeStyle = "#34eb5c";
       ctx.lineWidth = 2;
       ctx.stroke();
 
-      // Draw a circle at the start point of the temporary line
+      // Draw circles for the temporary line
       ctx.beginPath();
-      ctx.arc(tempLine.start.x, tempLine.start.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.arc(startX, startY, 5, 0, 2 * Math.PI);
       ctx.fillStyle = "#34eb5c";
       ctx.fill();
 
-      // Draw a circle at the end point of the temporary line
       ctx.beginPath();
-      ctx.arc(tempLine.end.x, tempLine.end.y, 5, 0, 2 * Math.PI); // Circle with radius 5
+      ctx.arc(endX, endY, 5, 0, 2 * Math.PI);
       ctx.fillStyle = "#34eb5c";
       ctx.fill();
     }
@@ -140,6 +163,15 @@ const CameraMonitor = () => {
     setTempLine(null); // Clear the temporary line
   };
 
+  const Submit = () => {
+    const result = lines.map((item) => [item.start.x, item.start.y]);
+
+    // Add the last object's end value
+    const lastObject = lines[lines.length - 1];
+    result.push([lastObject.end.x, lastObject.end.y]);
+
+    console.log(result);
+  };
   return (
     <section className="custom-cards monitor p-3">
       <div className="d-flex justify-content-between pagination">
@@ -189,7 +221,7 @@ const CameraMonitor = () => {
           <div>
             <GrFormEdit className="icon active mb-2" />
             <LiaHashtagSolid className="icon mb-2" />
-            <LiaCodeBranchSolid className="icon mb-2" />
+            <LiaCodeBranchSolid className="icon mb-2" onClick={Submit} />
           </div>
           <div>
             <PiArrowUUpLeft className="icon mb-2" />
