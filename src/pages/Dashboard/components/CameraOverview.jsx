@@ -3,8 +3,15 @@ import { Col, Row } from "react-bootstrap";
 import CCTVCamera from "../../../../public/image/dashboard/camera-view/cctv-camera.svg";
 import Accept from "../../../../public/image/dashboard/camera-view/accept.svg";
 import Cancel from "../../../../public/image/dashboard/camera-view/cancel.svg";
+import { useFetchData } from "../../../hooks/useServiceApi";
+import { getCamera_overview } from "../../../services/apiUrls";
 
 const CameraOverview = () => {
+  const { data } = useFetchData({
+    key: "getCamera_overview",
+    url: getCamera_overview,
+  });
+  console.log(data);
   return (
     <div className="custom-cards px-2">
       <Row className="camera-overview">
@@ -17,7 +24,9 @@ const CameraOverview = () => {
             <img src={CCTVCamera} alt="camera" />
           </div>
           <p className="text-center f-14">Total Cameras Count</p>
-          <h3 className="text-center fw-700 f-24 mb-0">260</h3>
+          <h3 className="text-center fw-700 f-24 mb-0">
+            {data?.data?.total_cameras}
+          </h3>
         </Col>
         <Col xs={12} md={6}>
           <Row className="h-100">
@@ -27,7 +36,7 @@ const CameraOverview = () => {
                   <img src={Accept} alt="i" width={18} />
                   &nbsp; On duty - Working
                 </p>
-                <h3 className="f-24">260</h3>
+                <h3 className="f-24">{data?.data?.on_duty_cameras}</h3>
                 <small className="c-lightGrey text-left f-13">
                   Same as yesterday{" "}
                 </small>
@@ -39,7 +48,7 @@ const CameraOverview = () => {
                   <img src={Cancel} alt="i" width={18} />
                   &nbsp;Off duty - Not working
                 </p>
-                <h3 className="f-24">10</h3>
+                <h3 className="f-24">{data?.data?.off_duty_cameras}</h3>
                 <small className="c-lightGrey text-left f-13">
                   Same as yesterday{" "}
                 </small>

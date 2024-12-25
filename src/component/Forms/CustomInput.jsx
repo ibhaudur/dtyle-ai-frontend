@@ -9,6 +9,8 @@ const CustomInput = ({
   valKey,
   labelKey,
   defaultlabel,
+  Onchange,
+  key_name,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
@@ -22,11 +24,17 @@ const CustomInput = ({
             type={showPassword ? "text" : "password"}
             placeholder={placeholder}
             className={`form-control form-input ${specialClass}`}
+            onChange={Onchange}
+            name={key_name}
           />
         );
       case "select":
         return (
-          <select className={`form-select form-input ${specialClass}`}>
+          <select
+            className={`form-select form-input ${specialClass}`}
+            onChange={Onchange}
+            name={key_name}
+          >
             <option value="">{label ? `Select ${label}` : defaultlabel}</option>
             {options.map((item, index) => (
               <option key={index} value={item[valKey]}>
@@ -39,8 +47,10 @@ const CustomInput = ({
         return (
           <input
             type={type}
+            name={key_name}
             placeholder={placeholder}
             className={`form-control form-input ${specialClass}`}
+            onChange={Onchange}
           />
         );
     }

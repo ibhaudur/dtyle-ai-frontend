@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "../auth.css";
 import Logo from "../../../../public/image/dtile.svg";
@@ -8,9 +8,35 @@ import CustomButton from "../../../component/Button/CustomButton";
 import useResponsive from "../../../hooks/useResponsive";
 import { Link, useNavigate } from "react-router-dom";
 import Banner from "../component/Banner";
+import { usePostData } from "../../../hooks/useServiceApi";
+import { PostLogin } from "../../../services/apiUrls";
+import { toast } from "react-toastify";
+import useHandleChange from "../../../hooks/useHandleChange";
+import { useDispatch } from "react-redux";
+import { userDetails } from "../../../redux/reducer/userSlice";
 const Login = () => {
   const { isMobile } = useResponsive();
+  const dispatch = useDispatch();
+  const { values, handleChange } = useHandleChange();
   const navigate = useNavigate();
+
+  const { mutate, data, isSuccess, isError, error } = usePostData({
+    key: "PostLogin",
+    url: PostLogin,
+  });
+  const handleSubmit = () => {
+    mutate(values);
+  };
+  console.log(data);
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success(data?.message);
+      navigate("/dashboard");
+      dispatch(userDetails(data.token));
+    } else if (isError) {
+      toast.error(error?.response?.data?.message);
+    }
+  }, [isSuccess, isError]);
   return (
     <Container fluid className="login">
       <Row className="justify-content-center">
@@ -49,12 +75,16 @@ const Login = () => {
                 type="email"
                 placeholder="Enter Email or User name"
                 specialClass="h-50px mb-1"
+                key_name="email"
+                Onchange={handleChange}
               />
               <CustomInput
                 label="Password"
                 type="password"
                 placeholder="Enter Password"
                 specialClass="h-50px mb-1"
+                key_name="password"
+                Onchange={handleChange}
               />
               <div className="f-14 fw-500 d-flex justify-content-between align-items-center">
                 <CheckBox label="Remember" />
@@ -68,7 +98,7 @@ const Login = () => {
               <CustomButton
                 btnName="Sign in"
                 additionalStyle="w-100 radius-39"
-                handleClick={() => navigate("/dashboard")}
+                handleClick={handleSubmit}
               />
             </div>
           </section>

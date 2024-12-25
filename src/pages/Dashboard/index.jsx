@@ -12,7 +12,12 @@ import ANPR from "./components/ANPR";
 import GenderAndEmotion from "./components/GenderAndEmotion";
 import CrowdDetection from "./components/CrowdDetection";
 import AgePercentage from "./components/AgePercentage";
+import { useDispatch, useSelector } from "react-redux";
+import { userDetails } from "../../redux/reducer/userSlice";
 const Dashboard = () => {
+  // const dispatch = useDispatch();
+  // const user = useSelector((state) => state.user);
+  // dispatch(userDetails("ibhaudur Rahman"));
   return (
     <React.Fragment>
       <div className="expire fixed-top d-flex justify-content-center align-items-center">
