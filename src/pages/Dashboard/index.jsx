@@ -58,7 +58,7 @@ const Dashboard = () => {
             <CrowdDetection />
           </Col>
           <Col md={12} lg={4} className="px-2">
-            <AgePercentage />
+            <AgePercentage data={GenderData} />
           </Col>
         </Row>
       </Container>

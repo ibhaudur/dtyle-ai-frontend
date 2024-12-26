@@ -12,7 +12,7 @@ const GenderAndEmotion = ({ data }) => {
   const EmotionList = data?.data?.emotionCounts?.map((item, index) => ({
     label: item.emotion,
     count: item.percentage,
-    color: ["#7263E9", "#E7B92E"][index],
+    color: ["#52CC7B", "#FF4444", "#FFCD35"][index],
   }));
   return (
     <section className="custom-cards p-3 mb-3">
@@ -29,7 +29,7 @@ const GenderAndEmotion = ({ data }) => {
         <DonutChart title="State based count" list={GenderList || []} />
       </div>
       <div className="mt-3">
-        <DonutChart title="RTO based count" list={EmotionbasedList} />
+        <DonutChart title="RTO based count" list={EmotionList || []} />
       </div>
     </section>
   );
