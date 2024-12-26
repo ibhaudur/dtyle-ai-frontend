@@ -7,10 +7,17 @@ import ModalBox from "../../../component/Modal/ModalBox";
 import CCTVIcon from "../../../component/Icon/CCTVIcon";
 import SingleDatePicker from "../../../component/Forms/SingleDatePicker";
 import CustomDateUi from "../../../component/UI/CustomDateUi";
+import { useFetchData } from "../../../hooks/useServiceApi";
+import { getLive_alert } from "../../../services/apiUrls";
+import { formatDate } from "../../../utils";
 const LiveAlerts = () => {
   const [open, setOpen] = useState(false);
   const [details, setDetails] = useState({});
   const [date, setDate] = useState(new Date());
+  const { data } = useFetchData({
+    key: `${getLive_alert}?alertDate=${formatDate(date)}`,
+    url: `${getLive_alert}?alertDate=${formatDate(date)}`,
+  });
   return (
     <section className="custom-cards alerts p-3">
       <ModalBox title={details.title} open={open} setOpen={setOpen}>
@@ -45,7 +52,9 @@ const LiveAlerts = () => {
       <CustomDateUi date={date} setDate={setDate} />
       <div className="d-flex align-items-center justify-content-between mt-3">
         <hr className="flex-grow-1" />
-        <span className="mx-2 f-24 fw-700 Helvetica Neue c-blue">1,532</span>
+        <span className="mx-2 f-24 fw-700 Helvetica Neue c-blue">
+          {data?.data}
+        </span>
         <hr className="flex-grow-1" />
       </div>
       <p className="text-center c-lightGrey">

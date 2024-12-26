@@ -126,6 +126,18 @@ export const StatebasedList = [
   // { label: "Delhi", count: 230, color: "#7187BA" },
   // { label: "Kolkata", count: 310, color: "#FECF16" },
 ];
+export const ColorCodes = [
+  "#BEB9E7",
+  "#9D95DB",
+  "#7D72C4",
+  "#5C4FC3",
+  "#4A3F9C",
+  "#25204E",
+  "#3F3971",
+  "#1F1A3A",
+  "#6B62A6",
+  "#857FBF",
+];
 
 export const TalukbasedList = [
   { label: "Bengaluru", count: 1, color: "#BEB9E7" },

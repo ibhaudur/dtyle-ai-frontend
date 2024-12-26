@@ -14,20 +14,20 @@ import { toast } from "react-toastify";
 import useHandleChange from "../../../hooks/useHandleChange";
 import { useDispatch } from "react-redux";
 import { userDetails } from "../../../redux/reducer/userSlice";
+import BackdropLoader from "../../../component/loader/BackdropLoader";
 const Login = () => {
   const { isMobile } = useResponsive();
   const dispatch = useDispatch();
   const { values, handleChange } = useHandleChange();
   const navigate = useNavigate();
 
-  const { mutate, data, isSuccess, isError, error } = usePostData({
+  const { mutate, data, isSuccess, isError, error, isPending } = usePostData({
     key: "PostLogin",
     url: PostLogin,
   });
   const handleSubmit = () => {
     mutate(values);
   };
-  console.log(data);
   useEffect(() => {
     if (isSuccess) {
       toast.success(data?.message);
@@ -39,6 +39,7 @@ const Login = () => {
   }, [isSuccess, isError]);
   return (
     <Container fluid className="login">
+      <BackdropLoader loader={isPending} />
       <Row className="justify-content-center">
         {!isMobile && (
           <Col md={6} lg={6} className="px-0">

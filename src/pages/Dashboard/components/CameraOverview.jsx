@@ -11,7 +11,6 @@ const CameraOverview = () => {
     key: "getCamera_overview",
     url: getCamera_overview,
   });
-  console.log(data);
   return (
     <div className="custom-cards px-2">
       <Row className="camera-overview">

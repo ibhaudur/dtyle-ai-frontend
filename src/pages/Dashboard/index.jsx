@@ -14,10 +14,14 @@ import CrowdDetection from "./components/CrowdDetection";
 import AgePercentage from "./components/AgePercentage";
 import { useDispatch, useSelector } from "react-redux";
 import { userDetails } from "../../redux/reducer/userSlice";
+import { useFetchData } from "../../hooks/useServiceApi";
+import { getGenderEmotionCounts } from "../../services/apiUrls";
 const Dashboard = () => {
-  // const dispatch = useDispatch();
-  // const user = useSelector((state) => state.user);
-  // dispatch(userDetails("ibhaudur Rahman"));
+  const { data: GenderData } = useFetchData({
+    key: "getGenderEmotionCounts",
+    url: getGenderEmotionCounts,
+  });
+  console.log(GenderData);
   return (
     <React.Fragment>
       <div className="expire fixed-top d-flex justify-content-center align-items-center">
@@ -48,7 +52,7 @@ const Dashboard = () => {
             <LicensePlate />
           </Col>
           <Col md={12} lg={4} className="px-2">
-            <GenderAndEmotion />
+            <GenderAndEmotion data={GenderData} />
           </Col>
           <Col md={12} lg={8} className="px-2">
             <CrowdDetection />
