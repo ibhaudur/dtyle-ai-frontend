@@ -36,7 +36,9 @@ const LicensePlate = ({ data }) => {
         <Col xs={12} md={7}>
           <div className="py-3">
             <div className="d-flex justify-content-between align-items-center mb-4">
-              <p className="f-14 fw-600 mb-0">5 vehicles listed</p>
+              <p className="f-14 fw-600 mb-0">
+                {data?.vehiclesListed?.length} vehicles listed
+              </p>
               <SearchBox />
             </div>
             <CustomTable header={VehicleHead} list={data?.vehiclesListed} />

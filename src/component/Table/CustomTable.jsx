@@ -69,6 +69,7 @@ export default function CustomTable({ header, list }) {
           ))}
         </TableBody>
       </Table>
+      {list?.length === 0 && <small className="d-block text-center mb-0">No data found!</small>}
     </TableContainer>
   );
 }

@@ -38,6 +38,11 @@ const PersonList = ({ data }) => {
             <small className="c-lightGrey">{item.timealerts}</small>
           </li>
         ))}
+        {data?.data?.detectedPersons?.length === 0 && (
+          <li>
+            <small className="d-block text-center mb-0">No data found!</small>
+          </li>
+        )}
       </ul>
       <Pagination />
     </section>
